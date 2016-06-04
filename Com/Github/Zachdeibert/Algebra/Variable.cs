@@ -80,6 +80,14 @@ namespace Com.Github.Zachdeibert.Algebra {
         }
 
         /// <summary>
+        /// Takes the logarithm of this object in the base of another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Logarithm(Algebrable second) {
+            return new LogarithmOperation(this, second);
+        }
+
+        /// <summary>
         /// Evaluates this expression into a single algebrable object.
         /// </summary>
         public override Algebrable Evaluate() {

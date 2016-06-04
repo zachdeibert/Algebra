@@ -63,6 +63,12 @@ namespace Com.Github.Zachdeibert.Algebra {
         public abstract Algebrable Exponentiate(Algebrable second);
 
         /// <summary>
+        /// Takes the logarithm of this object in the base of another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public abstract Algebrable Logarithm(Algebrable second);
+
+        /// <summary>
         /// Evaluates this expression into a single algebrable object.
         /// </summary>
         public abstract Algebrable Evaluate();

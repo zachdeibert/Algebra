@@ -131,6 +131,14 @@ namespace Com.Github.Zachdeibert.Algebra {
         }
 
         /// <summary>
+        /// Takes the logarithm of this object in the base of another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Logarithm(Algebrable second) {
+            return Evaluate().Logarithm(second);
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> class.
         /// </summary>
         protected AlgebraOperation() {

@@ -52,6 +52,7 @@
     <Compile Include="Com\Github\Zachdeibert\Algebra\IndependentVariableBase.cs" />
     <Compile Include="Com\Github\Zachdeibert\Algebra\IDependentVariable.cs" />
     <Compile Include="Com\Github\Zachdeibert\Algebra\Operations\ExponentiationOperation.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Operations\LogarithmOperation.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

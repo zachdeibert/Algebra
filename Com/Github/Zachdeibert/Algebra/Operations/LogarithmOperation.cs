@@ -1,10 +1,10 @@
 ﻿//
-// ExponentiationOperation.cs
+// LogarithmOperation.cs
 //
 // Author:
-//       Zach Deibert <zachdeibert@gmail.com>
+//       zach <${AuthorEmail}>
 //
-// Copyright (c) 2016 Zach Deibert
+// Copyright (c) 2016 zach
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +27,9 @@ using System;
 
 namespace Com.Github.Zachdeibert.Algebra.Operations {
     /// <summary>
-    /// An algebraic operation for exponentiating two numbers.
+    /// An algebraic operation that is the inverse of exponentiation.
     /// </summary>
-    public class ExponentiationOperation : AlgebraOperation {
+    public class LogarithmOperation : AlgebraOperation {
         /// <summary>
         /// Gets the equivalent operation where the left and right operands are flipped.
         /// </summary>
@@ -46,7 +46,7 @@ namespace Com.Github.Zachdeibert.Algebra.Operations {
         /// <returns>The inverse operation.</returns>
         /// <param name="left">The left operand.</param>
         protected override AlgebraOperation GetInverse(Algebrable left) {
-            return new ExponentiationOperation(left, new DivisionOperation(1, Right));
+            return new ExponentiationOperation(Right, left);
         }
 
         /// <summary>
@@ -58,18 +58,18 @@ namespace Com.Github.Zachdeibert.Algebra.Operations {
 
         /// <summary>
         /// Initializes a new instance of the
-        /// <see cref="Com.Github.Zachdeibert.Algebra.Operations.ExponentiationOperation"/> class.
+        /// <see cref="Com.Github.Zachdeibert.Algebra.Operations.LogarithmOperation"/> class.
         /// </summary>
-        public ExponentiationOperation() {
+        public LogarithmOperation() {
         }
 
         /// <summary>
         /// Initializes a new instance of the
-        /// <see cref="Com.Github.Zachdeibert.Algebra.Operations.ExponentiationOperation"/> class.
+        /// <see cref="Com.Github.Zachdeibert.Algebra.Operations.LogarithmOperation"/> class.
         /// </summary>
         /// <param name="left">The left operand.</param>
         /// <param name="right">The right operand.</param>
-        public ExponentiationOperation(Algebrable left, Algebrable right) {
+        public LogarithmOperation(Algebrable left, Algebrable right) {
             Left = left;
             Right = right;
         }
