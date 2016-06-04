@@ -37,7 +37,15 @@ namespace Com.Github.Zachdeibert.Algebra {
         public void TestXPlus2Equals4() {
             DependentVariable<AlgebrableInt> x = new DependentVariable<AlgebrableInt>();
             _(x + 2 == 4);
-            Assert.AreEqual(x.Value, 2);
+            Assert.AreEqual(2, x.Value);
+        }
+
+        [Test]
+        public void TestMultipleEquations() {
+            DependentVariable<AlgebrableInt> x = new DependentVariable<AlgebrableInt>();
+            DependentVariable<AlgebrableInt> y = new DependentVariable<AlgebrableInt>();
+            _((y + 3) * 6 == 42, x + y == 10);
+            Assert.AreEqual(6, x.Value);
         }
     }
 }
