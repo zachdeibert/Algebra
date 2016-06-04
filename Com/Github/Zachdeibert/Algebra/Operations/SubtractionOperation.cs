@@ -31,6 +31,16 @@ namespace Com.Github.Zachdeibert.Algebra.Operations {
     /// </summary>
     public class SubtractionOperation : AlgebraOperation {
         /// <summary>
+        /// Gets the equivalent operation where the left and right operands are flipped.
+        /// </summary>
+        /// <value>The flipped operation.</value>
+        public override AlgebraOperation Flip {
+            get {
+                return new AdditionOperation(new MultiplicationOperation(-1, Right), Left);
+            }
+        }
+
+        /// <summary>
         /// Gets the inverse <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> with the specified left operand.
         /// </summary>
         /// <returns>The inverse operation.</returns>

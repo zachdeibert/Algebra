@@ -114,7 +114,9 @@ namespace Com.Github.Zachdeibert.Algebra {
                                     subRight = op.Right;
                                 }
                             } else if ( HasDV(op.Right, dv) ) {
-                                throw new NotImplementedException("This equation is not yet supporetd");
+                                op = op.Flip;
+                                subLeft = op.Left;
+                                subRight = op.Right;
                             } else {
                                 throw new InvalidOperationException("Internal error");
                             }

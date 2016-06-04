@@ -76,6 +76,14 @@ namespace Com.Github.Zachdeibert.Algebra {
         }
 
         /// <summary>
+        /// Gets the equivalent operation where the left and right operands are flipped.
+        /// </summary>
+        /// <value>The flipped operation.</value>
+        public abstract AlgebraOperation Flip {
+            get;
+        }
+
+        /// <summary>
         /// Gets the inverse <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> with the specified left operand.
         /// </summary>
         /// <returns>The inverse operation.</returns>

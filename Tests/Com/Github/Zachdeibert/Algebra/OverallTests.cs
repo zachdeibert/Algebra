@@ -47,6 +47,16 @@ namespace Com.Github.Zachdeibert.Algebra {
             _((y + 3) * 6 == 42, x + y == 10);
             Assert.AreEqual(6, x.Value);
         }
+
+        [Test]
+        public void TestFlippingExpressions() {
+            DependentVariable<AlgebrableInt> x = new DependentVariable<AlgebrableInt>();
+            _(x + 2 == 4);
+            Assert.AreEqual(2, x.Value);
+            DependentVariable<AlgebrableInt> y = new DependentVariable<AlgebrableInt>();
+            _(2 + y == 4);
+            Assert.AreEqual(2, y.Value);
+        }
     }
 }
 

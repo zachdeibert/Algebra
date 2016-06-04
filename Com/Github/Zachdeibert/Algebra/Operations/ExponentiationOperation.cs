@@ -31,6 +31,16 @@ namespace Com.Github.Zachdeibert.Algebra.Operations {
     /// </summary>
     public class ExponentiationOperation : AlgebraOperation {
         /// <summary>
+        /// Gets the equivalent operation where the left and right operands are flipped.
+        /// </summary>
+        /// <value>The flipped operation.</value>
+        public override AlgebraOperation Flip {
+            get {
+                throw new NotImplementedException();
+            }
+        }
+
+        /// <summary>
         /// Gets the inverse <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> with the specified left operand.
         /// </summary>
         /// <returns>The inverse operation.</returns>
