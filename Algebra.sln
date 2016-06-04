@@ -5,12 +5,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algebra", "Algebra.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{AF233293-AE72-4E27-8771-C67437110FCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{384CA8FA-D584-4FB6-A079-0EC76EDA6524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{384CA8FA-D584-4FB6-A079-0EC76EDA6524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384CA8FA-D584-4FB6-A079-0EC76EDA6524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384CA8FA-D584-4FB6-A079-0EC76EDA6524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384CA8FA-D584-4FB6-A079-0EC76EDA6524}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9336CF3D-8FF5-402B-A9C2-0ED71AD2E5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9336CF3D-8FF5-402B-A9C2-0ED71AD2E5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9336CF3D-8FF5-402B-A9C2-0ED71AD2E5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -64,6 +70,9 @@ Global
 		$4.inheritsSet = VisualStudio
 		$4.inheritsScope = text/plain
 		$4.scope = text/plain
+		$0.StandardHeader = $5
+		$5.Text = @\n${FileName}\n \nAuthor:\n      ${AuthorName} <${AuthorEmail}>\n\nCopyright (c) ${Year} ${CopyrightHolder}\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.
+		$5.IncludeInNewFiles = True
 		description = A c# library that makes algebra easier to do
 		version = 1.0
 	EndGlobalSection
