@@ -55,6 +55,16 @@
     <Compile Include="Com\Github\Zachdeibert\Algebra\Operations\LogarithmOperation.cs" />
     <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\PrimitiveAlgebrable.cs" />
     <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\IPrimitiveAlgebrable.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableByte.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableDecimal.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableDouble.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableFloat.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableLong.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableShort.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableUInt.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableSByte.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableULong.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\AlgebrableUShort.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
