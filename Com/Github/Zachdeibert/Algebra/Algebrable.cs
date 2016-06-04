@@ -146,6 +146,66 @@ namespace Com.Github.Zachdeibert.Algebra {
         public static implicit operator Algebrable(int value) {
             return (AlgebrableInt) value;
         }
+
+        /// Converts a byte to an algebrable object
+        /// <param name="value">The primitive byte value.</param>
+        public static implicit operator Algebrable(byte value) {
+            return (AlgebrableByte) value;
+        }
+
+        /// Converts a sbyte to an algebrable object
+        /// <param name="value">The primitive sbyte value.</param>
+        public static implicit operator Algebrable(sbyte value) {
+            return (AlgebrableSByte) value;
+        }
+
+        /// Converts a uint to an algebrable object
+        /// <param name="value">The primitive uint value.</param>
+        public static implicit operator Algebrable(uint value) {
+            return (AlgebrableUInt) value;
+        }
+
+        /// Converts a short to an algebrable object
+        /// <param name="value">The primitive short value.</param>
+        public static implicit operator Algebrable(short value) {
+            return (AlgebrableShort) value;
+        }
+
+        /// Converts a ushort to an algebrable object
+        /// <param name="value">The primitive ushort value.</param>
+        public static implicit operator Algebrable(ushort value) {
+            return (AlgebrableUShort) value;
+        }
+
+        /// Converts a long to an algebrable object
+        /// <param name="value">The primitive long value.</param>
+        public static implicit operator Algebrable(long value) {
+            return (AlgebrableLong) value;
+        }
+
+        /// Converts a ulong to an algebrable object
+        /// <param name="value">The primitive ulong value.</param>
+        public static implicit operator Algebrable(ulong value) {
+            return (AlgebrableULong) value;
+        }
+
+        /// Converts a float to an algebrable object
+        /// <param name="value">The primitive float value.</param>
+        public static implicit operator Algebrable(float value) {
+            return (AlgebrableFloat) value;
+        }
+
+        /// Converts a double to an algebrable object
+        /// <param name="value">The primitive double value.</param>
+        public static implicit operator Algebrable(double value) {
+            return (AlgebrableDouble) value;
+        }
+
+        /// Converts a decimal to an algebrable object
+        /// <param name="value">The primitive decimal value.</param>
+        public static implicit operator Algebrable(decimal value) {
+            return (AlgebrableDecimal) value;
+        }
     }
 }
 
