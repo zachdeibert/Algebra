@@ -46,7 +46,7 @@ namespace Com.Github.Zachdeibert.Algebra.Operations {
         /// <returns>The inverse operation.</returns>
         /// <param name="left">The left operand.</param>
         protected override AlgebraOperation GetInverse(Algebrable left) {
-            return new DivisionOperation(left, Right);
+            throw new NotImplementedException();
         }
 
         /// <summary>
