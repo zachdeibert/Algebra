@@ -27,9 +27,17 @@ using System;
 using System.Collections.Generic;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// An algebrable variable that changes as a result of another independent
+    /// variable changing. This is generally what is being solved for in an equation.
+    /// </summary>
     public class DependentVariable<T> : Variable<T>, IDependentVariable<T> where T : Algebrable {
         private readonly List<Equation> Equations;
 
+        /// <summary>
+        /// Gets the value of this variable.
+        /// </summary>
+        /// <value>The value.</value>
         public override T Value {
             get {
                 foreach ( Equation eq in Equations ) {
@@ -44,12 +52,21 @@ namespace Com.Github.Zachdeibert.Algebra {
             }
         }
 
+        /// <summary>
+        /// Adds an equation to the list of equations this dependent variable is
+        /// in. This equation can then be used for solving for the value of the
+        /// dependent variable.
+        /// </summary>
+        /// <param name="eq">The equation.</param>
         public void AddEquation(Equation eq) {
             if ( eq != null && !Equations.Contains(eq) ) {
                 Equations.Add(eq);
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.DependentVariable{T}"/> class.
+        /// </summary>
         public DependentVariable() {
             Equations = new List<Equation>();
         }

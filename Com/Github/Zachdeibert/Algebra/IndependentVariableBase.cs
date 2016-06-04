@@ -26,9 +26,19 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// Base class for the <see cref="Com.Github.Zachdeibert.Algebra.IndependentVariable{T}"/> class. DO NOT USE!
+    /// </summary>
     public class IndependentVariableBase<T> : Variable<T> where T : Algebrable {
+        /// <summary>
+        /// The value of this variable.
+        /// </summary>
         protected T _Value;
 
+        /// <summary>
+        /// Gets the value of this variable.
+        /// </summary>
+        /// <value>The value.</value>
         public override T Value {
             get {
                 return _Value;

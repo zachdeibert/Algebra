@@ -26,33 +26,64 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// A constant value that is algebrable.
+    /// </summary>
     public class Constant<T> : ConstantBase<T> where T : Algebrable {
+        /// <summary>
+        /// Gets the value of the constant.
+        /// </summary>
+        /// <value>The value.</value>
         public new T Value {
             get {
                 return base.Value;
             }
         }
 
+        /// <summary>
+        /// Adds another algebrable object to this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Add(Algebrable second) {
             return second is Constant<T> ? (((object) Value) == null ? null : Value.Add(second)) : base.Add(second);
         }
 
+        /// <summary>
+        /// Subtracts another algebrable object from this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Subtract(Algebrable second) {
             return second is Constant<T> ? (((object) Value) == null ? null : Value.Subtract(second)) : base.Subtract(second);
         }
 
+        /// <summary>
+        /// Multiplies another algebrable object by this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Multiply(Algebrable second) {
             return second is Constant<T> ? (((object) Value) == null ? null : Value.Multiply(second)) : base.Multiply(second);
         }
 
+        /// <summary>
+        /// Divides this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Divide(Algebrable second) {
             return second is Constant<T> ? (((object) Value) == null ? null : Value.Divide(second)) : base.Divide(second);
         }
 
+        /// <summary>
+        /// Exponentiates this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Exponentiate(Algebrable second) {
             return second is Constant<T> ? (((object) Value) == null ? null : Value.Exponentiate(second)) : base.Exponentiate(second);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.Constant{T}"/> class.
+        /// </summary>
+        /// <param name="value">The value of the constant.</param>
         public Constant(T value) {
             _Value = value;
         }

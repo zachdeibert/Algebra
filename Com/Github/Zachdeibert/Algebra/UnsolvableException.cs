@@ -26,13 +26,29 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// An exception that is thrown when there is not enough information to solve
+    /// an equation.
+    /// </summary>
     public class UnsolvableException : Exception {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.UnsolvableException"/> class.
+        /// </summary>
         public UnsolvableException() {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.UnsolvableException"/> class.
+        /// </summary>
+        /// <param name="message">The message of the exception.</param>
         public UnsolvableException(string message) : base(message) {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.UnsolvableException"/> class.
+        /// </summary>
+        /// <param name="message">The message of the exception.</param>
+        /// <param name="innerException">The exception that caused this exception.</param>
         public UnsolvableException(string message, Exception innerException) : base(message, innerException) {
         }
     }

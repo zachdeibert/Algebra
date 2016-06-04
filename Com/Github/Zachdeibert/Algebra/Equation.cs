@@ -26,28 +26,50 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// An equation in which two algebrable sides are equal
+    /// </summary>
     public class Equation {
         private Algebrable _Left;
         private Algebrable _Right;
 
+        /// <summary>
+        /// Gets the left side of the equation.
+        /// </summary>
+        /// <value>The left side.</value>
         public Algebrable Left {
             get {
                 return _Left;
             }
         }
 
+        /// <summary>
+        /// Gets the right side of the equation.
+        /// </summary>
+        /// <value>The right side.</value>
         public Algebrable Right {
             get {
                 return _Right;
             }
         }
 
+        /// <summary>
+        /// Gets the inverse of this equation.
+        /// </summary>
+        /// <value>The inverse equation.</value>
         public Equation Inverse {
             get {
                 return new Equation(Right, Left, false);
             }
         }
 
+        /// <summary>
+        /// Determines if an expression contains the specified dependent variable.
+        /// </summary>
+        /// <returns><c>true</c> if an expression contains the specified dependent variable; otherwise, <c>false</c>.</returns>
+        /// <param name="expression">The expression to search.</param>
+        /// <param name="dv">The dependent variable to find.</param>
+        /// <typeparam name="T">The type of the dependent variable.</typeparam>
         public static bool HasDV<T>(Algebrable expression, DependentVariable<T> dv) where T : Algebrable {
             if ( expression is AlgebraOperation ) {
                 return HasDV((AlgebraOperation) expression, dv);
@@ -56,10 +78,22 @@ namespace Com.Github.Zachdeibert.Algebra {
             }
         }
 
+        /// <summary>
+        /// Determines if an expression contains the specified dependent variable.
+        /// </summary>
+        /// <returns><c>true</c> if an expression contains the specified dependent variable; otherwise, <c>false</c>.</returns>
+        /// <param name="expression">The expression to search.</param>
+        /// <param name="dv">The dependent variable to find.</param>
+        /// <typeparam name="T">The type of the dependent variable.</typeparam>
         public static bool HasDV<T>(AlgebraOperation expression, DependentVariable<T> dv) where T : Algebrable {
             return HasDV(expression.Left, dv) || HasDV(expression.Right, dv);
         }
 
+        /// <summary>
+        /// Solved this equation for the specified dependent variable.
+        /// </summary>
+        /// <param name="dv">The dependent variable to solve for.</param>
+        /// <typeparam name="T">The type of the dependent variable.</typeparam>
         public T Solve<T>(DependentVariable<T> dv) where T : Algebrable {
             if ( HasDV(Left, dv) ) {
                 if ( HasDV(Right, dv) ) {
@@ -121,6 +155,11 @@ namespace Com.Github.Zachdeibert.Algebra {
             }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.Equation"/> class.
+        /// </summary>
+        /// <param name="left">The left side of the equation.</param>
+        /// <param name="right">The left side of the equation.</param>
         public Equation(Algebrable left, Algebrable right) : this(left, right, true) {
         }
     }

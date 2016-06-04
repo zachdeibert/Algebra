@@ -26,7 +26,15 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// A variable that is changed by code outside of this library and is treated
+    /// as a constant while doing calculations.
+    /// </summary>
     public class IndependentVariable<T> : IndependentVariableBase<T> where T : Algebrable {
+        /// <summary>
+        /// Gets or sets the value of the variable.
+        /// </summary>
+        /// <value>The value.</value>
         public new virtual T Value {
             get {
                 return base.Value;

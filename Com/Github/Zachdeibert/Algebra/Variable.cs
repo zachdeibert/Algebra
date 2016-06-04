@@ -27,31 +27,61 @@ using System;
 using Com.Github.Zachdeibert.Algebra.Operations;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// The base class for algebrable variables.
+    /// </summary>
     public abstract class Variable<T> : Algebrable where T : Algebrable {
+        /// <summary>
+        /// Gets the value of this variable.
+        /// </summary>
+        /// <value>The value.</value>
         public abstract T Value {
             get;
         }
 
+        /// <summary>
+        /// Adds another algebrable object to this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Add(Algebrable second) {
             return new AdditionOperation(this, second);
         }
 
+        /// <summary>
+        /// Subtracts another algebrable object from this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Subtract(Algebrable second) {
             return new SubtractionOperation(this, second);
         }
 
+        /// <summary>
+        /// Multiplies another algebrable object by this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Multiply(Algebrable second) {
             return new MultiplicationOperation(this, second);
         }
 
+        /// <summary>
+        /// Divides this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Divide(Algebrable second) {
             return new DivisionOperation(this, second);
         }
 
+        /// <summary>
+        /// Exponentiates this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Exponentiate(Algebrable second) {
             return new ExponentiationOperation(this, second);
         }
 
+        /// <summary>
+        /// Evaluates this expression into a single algebrable object.
+        /// </summary>
         public override Algebrable Evaluate() {
             return Value;
         }

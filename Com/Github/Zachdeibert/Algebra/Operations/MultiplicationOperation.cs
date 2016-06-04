@@ -26,18 +26,39 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra.Operations {
+    /// <summary>
+    /// An algebraic operation for multiplying two numbers
+    /// </summary>
     public class MultiplicationOperation : AlgebraOperation {
+        /// <summary>
+        /// Gets the inverse <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> with the specified left operand.
+        /// </summary>
+        /// <returns>The inverse operation.</returns>
+        /// <param name="left">The left operand.</param>
         protected override AlgebraOperation GetInverse(Algebrable left) {
             return new DivisionOperation(left, Right);
         }
 
+        /// <summary>
+        /// Evaluates this expression into a single algebrable object.
+        /// </summary>
         public override Algebrable Evaluate() {
             return ((object) Left) == null ? null : Left.Multiply(Right);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the
+        /// <see cref="Com.Github.Zachdeibert.Algebra.Operations.MultiplicationOperation"/> class.
+        /// </summary>
         public MultiplicationOperation() {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the
+        /// <see cref="Com.Github.Zachdeibert.Algebra.Operations.MultiplicationOperation"/> class.
+        /// </summary>
+        /// <param name="left">The left operand.</param>
+        /// <param name="right">The right operand.</param>
         public MultiplicationOperation(Algebrable left, Algebrable right) {
             Left = left;
             Right = right;

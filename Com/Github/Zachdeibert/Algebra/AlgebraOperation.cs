@@ -27,10 +27,20 @@ using System;
 using Com.Github.Zachdeibert.Algebra.Operations;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// Represents a binary operation between two algebrable objects.
+    /// </summary>
     public abstract class AlgebraOperation : Algebrable {
+        /// <summary>
+        /// Helper class for syntax of inverting an operation.
+        /// </summary>
         public class Inverser {
             private readonly AlgebraOperation Op;
 
+            /// <summary>
+            /// Gets the inverse <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> with the specified left operand.
+            /// </summary>
+            /// <param name="left">The left operand.</param>
             public AlgebraOperation this[Algebrable left] {
                 get {
                     return Op.GetInverse(left);
@@ -42,40 +52,79 @@ namespace Com.Github.Zachdeibert.Algebra {
             }
         }
 
+        /// <summary>
+        /// Gets the inverse <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> with the specified left operand.
+        /// </summary>
         public readonly Inverser Inverse;
 
+        /// <summary>
+        /// Gets or sets the left operand.
+        /// </summary>
+        /// <value>The left operand.</value>
         public Algebrable Left {
             get;
             set;
         }
 
+        /// <summary>
+        /// Gets or sets the right operand.
+        /// </summary>
+        /// <value>The right operand.</value>
         public Algebrable Right {
             get;
             set;
         }
 
+        /// <summary>
+        /// Gets the inverse <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> with the specified left operand.
+        /// </summary>
+        /// <returns>The inverse operation.</returns>
+        /// <param name="left">The left operand.</param>
         protected abstract AlgebraOperation GetInverse(Algebrable left);
 
+        /// <summary>
+        /// Adds another algebrable object to this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Add(Algebrable second) {
             return Evaluate().Add(second);
         }
 
+        /// <summary>
+        /// Subtracts another algebrable object from this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Subtract(Algebrable second) {
             return Evaluate().Subtract(second);
         }
 
+        /// <summary>
+        /// Multiplies another algebrable object by this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Multiply(Algebrable second) {
             return Evaluate().Multiply(second);
         }
 
+        /// <summary>
+        /// Divides this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Divide(Algebrable second) {
             return Evaluate().Divide(second);
         }
 
+        /// <summary>
+        /// Exponentiates this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Exponentiate(Algebrable second) {
             return Evaluate().Exponentiate(second);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.AlgebraOperation"/> class.
+        /// </summary>
         protected AlgebraOperation() {
             Inverse = new Inverser(this);
         }

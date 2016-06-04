@@ -26,41 +26,75 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra.Primitives {
+    /// <summary>
+    /// An Algebrable class representing a primitive int.
+    /// </summary>
     public class AlgebrableInt : Algebrable {
         private readonly int Value;
 
+        /// <summary>
+        /// Adds another algebrable object to this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Add(Algebrable second) {
             return second is AlgebrableInt ? Value + ((AlgebrableInt) second).Value : Add(second.Evaluate());
         }
 
+        /// <summary>
+        /// Subtracts another algebrable object from this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Subtract(Algebrable second) {
             return second is AlgebrableInt ? Value - ((AlgebrableInt) second).Value : Subtract(second.Evaluate());
         }
 
+        /// <summary>
+        /// Multiplies another algebrable object by this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Multiply(Algebrable second) {
             return second is AlgebrableInt ? Value * ((AlgebrableInt) second).Value : Multiply(second.Evaluate());
         }
 
+        /// <summary>
+        /// Divides this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Divide(Algebrable second) {
             return second is AlgebrableInt ? Value / ((AlgebrableInt) second).Value : Divide(second.Evaluate());
         }
 
+        /// <summary>
+        /// Exponentiates this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
         public override Algebrable Exponentiate(Algebrable second) {
             return second is AlgebrableInt ? (int) Math.Pow(Value, ((AlgebrableInt) second).Value) : Exponentiate(second.Evaluate());
         }
 
+        /// <summary>
+        /// Evaluates this expression into a single algebrable object.
+        /// </summary>
         public override Algebrable Evaluate() {
             return this;
         }
 
+        /// Converts an int to an <see cref="Com.Github.Zachdeibert.Algebra.Primitives.AlgebrableInt"/>
+        /// <param name="value">The primitivie value.</param>
         public static implicit operator AlgebrableInt(int value) {
             return new AlgebrableInt(value);
         }
 
+        /// Converts an <see cref="Com.Github.Zachdeibert.Algebra.Primitives.AlgebrableInt"/> to an int
+        /// <param name="value">The algebrable value.</param>
         public static implicit operator int(AlgebrableInt value) {
             return value.Value;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.Primitives.AlgebrableInt"/> class.
+        /// </summary>
+        /// <param name="value">The primitive value.</param>
         public AlgebrableInt(int value) {
             Value = value;
         }

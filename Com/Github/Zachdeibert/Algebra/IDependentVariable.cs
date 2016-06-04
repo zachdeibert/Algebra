@@ -26,7 +26,17 @@
 using System;
 
 namespace Com.Github.Zachdeibert.Algebra {
+    /// <summary>
+    /// Generic interface for the
+    /// <see cref="Com.Github.Zachdeibert.Algebra.DependentVariable{T}"/> class.
+    /// </summary>
     public interface IDependentVariable<out T> where T : Algebrable {
+        /// <summary>
+        /// Adds an equation to the list of equations this dependent variable is
+        /// in. This equation can then be used for solving for the value of the
+        /// dependent variable.
+        /// </summary>
+        /// <param name="eq">The equation.</param>
         void AddEquation(Equation eq);
     }
 }
