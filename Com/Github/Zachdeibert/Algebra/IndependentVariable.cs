@@ -100,6 +100,8 @@ namespace Com.Github.Zachdeibert.Algebra {
             return Value;
         }
 
+        /// Creates an independent variable from a value
+        /// <param name="value">The value.</param>
         public static implicit operator IndependentVariable<T>(T value) {
             IndependentVariable<T> v = new IndependentVariable<T>();
             v.Value = value;
