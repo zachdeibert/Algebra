@@ -53,6 +53,8 @@
     <Compile Include="Com\Github\Zachdeibert\Algebra\IDependentVariable.cs" />
     <Compile Include="Com\Github\Zachdeibert\Algebra\Operations\ExponentiationOperation.cs" />
     <Compile Include="Com\Github\Zachdeibert\Algebra\Operations\LogarithmOperation.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\PrimitiveAlgebrable.cs" />
+    <Compile Include="Com\Github\Zachdeibert\Algebra\Primitives\IPrimitiveAlgebrable.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

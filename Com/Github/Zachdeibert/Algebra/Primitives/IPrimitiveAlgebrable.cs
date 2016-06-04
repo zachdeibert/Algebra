@@ -1,5 +1,5 @@
 ﻿//
-// AlgebrableInt.cs
+// IPrimitiveAlgebrable.cs
 //
 // Author:
 //       Zach Deibert <zachdeibert@gmail.com>
@@ -27,47 +27,21 @@ using System;
 
 namespace Com.Github.Zachdeibert.Algebra.Primitives {
     /// <summary>
-    /// An Algebrable class representing a primitive int.
+    /// Interface for the <see cref="Com.Github.Zachdeibert.Algebra.Primitives.PrimitiveAlgebrable{T}"/> class.
     /// </summary>
-    public class AlgebrableInt : PrimitiveAlgebrable<int> {
-        private int Value;
+    public interface IPrimitiveAlgebrable {
+        /// <summary>
+        /// Converts this instance to a decimal value.
+        /// </summary>
+        /// <returns>The decimal value.</returns>
+        decimal ToDecimal();
 
         /// <summary>
         /// Converts a decimal value to an algebrable object
         /// </summary>
         /// <returns>The algebrable object.</returns>
         /// <param name="value">The decimal value.</param>
-        public override Algebrable ToAlgebrable(decimal value) {
-            return new AlgebrableInt((int) value);
-        }
-
-        /// <summary>
-        /// Converts this instance to a decimal value.
-        /// </summary>
-        /// <returns>The decimal value.</returns>
-        public override decimal ToDecimal() {
-            return Value;
-        }
-
-        /// Converts an int to an <see cref="Com.Github.Zachdeibert.Algebra.Primitives.AlgebrableInt"/>
-        /// <param name="value">The primitivie value.</param>
-        public static implicit operator AlgebrableInt(int value) {
-            return new AlgebrableInt(value);
-        }
-
-        /// Converts an <see cref="Com.Github.Zachdeibert.Algebra.Primitives.AlgebrableInt"/> to an int
-        /// <param name="value">The algebrable value.</param>
-        public static implicit operator int(AlgebrableInt value) {
-            return value.Value;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Com.Github.Zachdeibert.Algebra.Primitives.AlgebrableInt"/> class.
-        /// </summary>
-        /// <param name="value">The primitive value.</param>
-        public AlgebrableInt(int value) {
-            this.Value = value;
-        }
+        Algebrable ToAlgebrable(decimal value);
     }
 }
 
