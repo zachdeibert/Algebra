@@ -57,6 +57,18 @@ namespace Com.Github.Zachdeibert.Algebra {
             _(2 + y == 4);
             Assert.AreEqual(2, y.Value);
         }
+
+        [Test]
+        public void TestIndependentVariables() {
+            IndependentVariable<AlgebrableInt> width = (AlgebrableInt) 0;
+            IndependentVariable<AlgebrableInt> height = (AlgebrableInt) 0;
+            DependentVariable<AlgebrableInt> area = new DependentVariable<AlgebrableInt>();
+            _(area == width * height);
+            Assert.AreEqual(0, area.Value);
+            width.Value = 42;
+            height.Value = 4;
+            Assert.AreEqual(168, area.Value);
+        }
     }
 }
 

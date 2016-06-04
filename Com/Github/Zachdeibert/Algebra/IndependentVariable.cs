@@ -44,6 +44,67 @@ namespace Com.Github.Zachdeibert.Algebra {
                 _Value = value;
             }
         }
+
+        /// <summary>
+        /// Adds another algebrable object to this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Add(Algebrable second) {
+            return Evaluate().Add(second);
+        }
+
+        /// <summary>
+        /// Subtracts another algebrable object from this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Subtract(Algebrable second) {
+            return Evaluate().Subtract(second);
+        }
+
+        /// <summary>
+        /// Multiplies another algebrable object by this object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Multiply(Algebrable second) {
+            return Evaluate().Multiply(second);
+        }
+
+        /// <summary>
+        /// Divides this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Divide(Algebrable second) {
+            return Evaluate().Divide(second);
+        }
+
+        /// <summary>
+        /// Exponentiates this object by another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Exponentiate(Algebrable second) {
+            return Evaluate().Exponentiate(second);
+        }
+
+        /// <summary>
+        /// Takes the logarithm of this object in the base of another algebrable object.
+        /// </summary>
+        /// <param name="second">The other object.</param>
+        public override Algebrable Logarithm(Algebrable second) {
+            return Evaluate().Logarithm(second);
+        }
+
+        /// <summary>
+        /// Evaluates this expression into a single algebrable object.
+        /// </summary>
+        public override Algebrable Evaluate() {
+            return Value;
+        }
+
+        public static implicit operator IndependentVariable<T>(T value) {
+            IndependentVariable<T> v = new IndependentVariable<T>();
+            v.Value = value;
+            return v;
+        }
     }
 }
 
