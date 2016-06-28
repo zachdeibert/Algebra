@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>language-itegrated-algebra</id>
+        <version>1.0</version>
+        <title>Language Integrated Algebra</title>
+        <authors>Zach Deibert</authors>
+        <owners>Zach Deibert</owners>
+        <licenseUrl>https://github.com/zachdeibert/language-integrated-algebra/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/zachdeibert/language-integrated-algebra</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A c# library that makes algebra easier to do</description>
+        <releaseNotes>Initial release.</releaseNotes>
+        <copyright>Copyright 2016 Zach Deibert</copyright>
+        <tags>Algebra Math</tags>
+    </metadata>
+    <files>
+        <file src="bin/Release/LINA.dll" target="lib/net35/LINA.dll" />
+    </files>
+</package>

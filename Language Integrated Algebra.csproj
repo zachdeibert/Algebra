@@ -6,7 +6,7 @@
     <ProjectGuid>{9336CF3D-8FF5-402B-A9C2-0ED71AD2E5BC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Com.Github.Zachdeibert.Algebra</RootNamespace>
-    <AssemblyName>Algebra</AssemblyName>
+    <AssemblyName>LINA</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <Description>A c# library that makes algebra easier to do</Description>
     <ReleaseVersion>1.0</ReleaseVersion>
@@ -74,4 +74,7 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <None Include="Language Integrated Algebra.nuspec" />
+  </ItemGroup>
 </Project>

@@ -30,7 +30,7 @@ using System.Runtime.CompilerServices;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle ("Algebra")]
+[assembly: AssemblyTitle ("Language Integrated Algebra")]
 [assembly: AssemblyDescription ("A c# library that makes algebra easier to do")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("")]
