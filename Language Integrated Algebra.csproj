@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9336CF3D-8FF5-402B-A9C2-0ED71AD2E5BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Com.Github.Zachdeibert.Algebra</RootNamespace>
+    <AssemblyName>Algebra</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Description>A c# library that makes algebra easier to do</Description>
+    <ReleaseVersion>1.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DocumentationFile>bin\Release\Algebra.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="LINA\AlgebraOperation.cs" />
+    <Compile Include="LINA\Algebrable.cs" />
+    <Compile Include="LINA\Constant.cs" />
+    <Compile Include="LINA\ConstantBase.cs" />
+    <Compile Include="LINA\DependentVariable.cs" />
+    <Compile Include="LINA\Equation.cs" />
+    <Compile Include="LINA\IDependentVariable.cs" />
+    <Compile Include="LINA\IndependentVariable.cs" />
+    <Compile Include="LINA\IndependentVariableBase.cs" />
+    <Compile Include="LINA\UnsolvableException.cs" />
+    <Compile Include="LINA\Variable.cs" />
+    <Compile Include="LINA\Operations\AdditionOperation.cs" />
+    <Compile Include="LINA\Operations\DivisionOperation.cs" />
+    <Compile Include="LINA\Operations\ExponentiationOperation.cs" />
+    <Compile Include="LINA\Operations\LogarithmOperation.cs" />
+    <Compile Include="LINA\Operations\MultiplicationOperation.cs" />
+    <Compile Include="LINA\Operations\SubtractionOperation.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableByte.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableDecimal.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableDouble.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableFloat.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableInt.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableLong.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableSByte.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableShort.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableUInt.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableULong.cs" />
+    <Compile Include="LINA\Primitives\AlgebrableUShort.cs" />
+    <Compile Include="LINA\Primitives\IPrimitiveAlgebrable.cs" />
+    <Compile Include="LINA\Primitives\PrimitiveAlgebrable.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Deployment.LinuxDeployData generatePcFile="False" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+</Project>

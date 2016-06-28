@@ -6,8 +6,8 @@ This library allows you to do algebra in your code without having to evaluate it
 For example,
 ```c#
 using System;
-using Com.Github.Zachdeibert.Algebra;
-using Com.Github.Zachdeibert.Primitives;
+using LINA;
+using LINA.Primitives;
 
 namespace AlgebraTest {
     class MainClass {

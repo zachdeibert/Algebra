@@ -43,21 +43,15 @@
     </MonoDevelop>
   </ProjectExtensions>
   <ItemGroup>
-    <ProjectReference Include="..\Algebra.csproj">
+    <ProjectReference Include="..\Language Integrated Algebra.csproj">
       <Project>{9336CF3D-8FF5-402B-A9C2-0ED71AD2E5BC}</Project>
-      <Name>Algebra</Name>
+      <Name>Language Integrated Algebra</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Com\" />
-    <Folder Include="Com\Github\" />
-    <Folder Include="Com\Github\Zachdeibert\" />
-    <Folder Include="Com\Github\Zachdeibert\Algebra\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Com\Github\Zachdeibert\Algebra\OverallTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LINA\OverallTests.cs" />
   </ItemGroup>
 </Project>
