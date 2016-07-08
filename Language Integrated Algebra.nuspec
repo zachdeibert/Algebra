@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
     <metadata>
-        <id>language-itegrated-algebra</id>
+        <id>language-integrated-algebra</id>
         <version>1.0</version>
         <title>Language Integrated Algebra</title>
         <authors>Zach Deibert</authors>
